@@ -14,10 +14,10 @@ after_success:
   - docker build -t aliguliyev75/multi-nginx ./nginx
   - docker build -t aliguliyev75/multi-server ./server
   - docker build -t aliguliyev75/multi-worker ./worke
-  ##logind ocker clie
+  ##login to the docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  ## take those images and push them to docker
-  - docker push aliguliyev75/multi-client
+  ## take those images and push them to docker hub
+  - docker push aliguliyev75/multi-client #name of image mugilti-client
   - docker push aliguliyev75/multi-nginx
   - docker push aliguliyev75/multi-server
   - docker push aliguliyev75/multi-worker 
